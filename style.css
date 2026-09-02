@@ -1,0 +1,129 @@
+:root {
+  --bg-color: #f4f6f9;
+  --card-bg: #ffffff;
+  --text-color: #1a1a1a;
+  --primary-color: #0b4f6c;
+  --alert-bg: #fff3cd;
+  --alert-border: #856404;
+  --button-bg: #0b4f6c;
+  --button-text: #ffffff;
+  --font-size-base: 20px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* Barra de Acessibilidade */
+.accessibility-bar {
+  background-color: #222222;
+  color: #ffffff;
+  padding: 12px 0;
+}
+
+.accessibility-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.accessibility-bar button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.accessibility-bar button:hover,
+.accessibility-bar button:focus {
+  outline: 3px solid #ffbf00;
+  background-color: #e6e6e6;
+}
+
+/* Cabeçalho */
+.main-header {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 25px 0;
+  text-align: center;
+}
+
+.main-header h1 {
+  margin-top: 0;
+  font-size: 1.8em;
+}
+
+/* Conteúdo */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 25px;
+  margin: 20px 0;
+}
+
+.card.alert {
+  background-color: var(--alert-bg);
+  border-left: 8px solid var(--alert-border);
+}
+
+ul, ol {
+  padding-left: 30px;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e2e8f0;
+  margin-top: 40px;
+}
+
+/* Modo Alto Contraste */
+body.high-contrast {
+  --bg-color: #000000;
+  --card-bg: #000000;
+  --text-color: #ffffff;
+  --primary-color: #000000;
+  --alert-bg: #000000;
+  --alert-border: #ffff00;
+}
+
+body.high-contrast .main-header {
+  border-bottom: 4px solid #ffff00;
+}
+
+body.high-contrast .card {
+  border: 3px solid #ffffff;
+}
+
+body.high-contrast .accessibility-bar {
+  border-bottom: 2px solid #ffffff;
+}
+
+body.high-contrast button {
+  background-color: #ffff00;
+  color: #000000;
+  border: 2px solid #ffffff;
+}
